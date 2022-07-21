@@ -1,93 +1,97 @@
-<!DOCTYPE html>
+<!DOCTYPE html>		
 <html lang="es">
 <head>
   <title>PeriódicoTransit</title>
-  <link href="Imagenes/favicon.png" rel="icon" type="image/x-icon">
+  <link href="resources/imagenes/favicon.png" rel="icon" type="image/x-icon">
+  <link href="resources/CSS/style.css" rel="stylesheet">
 </head>
+  <body>
+    <h1><em>PeriódicoTransit</em></h1><!--Con la etiqueta "em" creamos letra cursiva-->
+    
+    <main>
+      <ul>
+        <li>
+          <a href="#GustoBueno">¿Qué le gusta a un gato?</a> <!--Con "#" llamamos a la id "GustoBueno" y creamos un link que nos lleva a esa parte de la página-->
+        </li>
+        <li>
+          <a href="#GustoMalo">¿Qué no le gusta a un gato?</a>
+        </li>
+      </ul>
+    
+      <h3>Imágenes diarias de gatos:</h3>
+      <a href="https://bit.ly/3yU3NGT" rel="noopener noreferrer" target="_blank"> <!--Vídeo rickroll-->
+        <img alt="Un lindo gato Siberiano" src="https://bit.ly/3uIRevt"></a>
+        
+      <a href="https://bit.ly/3NXfile" rel="noopener noreferrer" target="_blank"> <!--Vídeo shrek-->
+        <img alt="El Gato Con Botas" src="resources/imagenes/GatoConBotas.jpg"></a> 
+      
+      <h4>¿Cuál es el ganador de hoy?</h4>
+      <form action="/enviar-encuesta">
+        <label for="PrimerGato">
+          <input id="PrimerGato" name="PrimerGato-SegundoGato" type="radio" value="PrimerGato">Primer Gato
+        </label>
+        <br>
+        
+        <label for="SegundoGato">
+          <input id="SegundoGato" name="PrimerGato-SegundoGato" type="radio" value="SegundoGato">Segundo Gato
+        </label>
+        <br>
+        <button type="submit">Enviar</button>
+      </form>
+      <hr>
+      
+      <p><strong><small>Aquí puedes enviar una foto de tu gato para participar en los concursos diarios.</small></strong></p>
+      <form action="/enviar-respuesta">
+        <!--Casillas de verificación-->
+        <label for="cariñoso">
+          <input id="cariñoso" type="checkbox" value="cariñoso" name="personalidad">Cariñoso
+        </label>
 
-	<body>
-		<h1><em>PeriódicoTransit</em></h1><!--Con la etiqueta "em" creamos letra cursiva-->
-		
-		<main>
-			<ul>
-				<li>
-					<a href="#GustoBueno">¿Qué le gusta a un gato?</a>
-				</li><!--De esta manera llamamos a la id puesta abajo y creamos un link que nos lleva a otra parte de la página-->
-				<li>
-					<a href="#GustoMalo">¿Qué no le gusta a un gato?</a>
-				</li>
-			</ul>
-		
-			<h3>Imágenes diarias de gatos:</h3>
-			<a href="https://bit.ly/3yU3NGT" rel="noopener noreferrer" target="_blank"> <!--Vídeo rickroll y foto gato siberiano-->
-				<img alt="Un lindo gato Siberiano" src="https://bit.ly/3uIRevt"></a> 
-			<a href="https://bit.ly/3NXfile" rel="noopener noreferrer" target="_blank">
-				<img alt="El Gato Con Botas" src="Imagenes/GatoConBotas.jpg"></a> <!--Vídeo shrek e imagen gato con botas-->
-			
-			<h4>¿Cuál es el ganador de hoy?</h4>
-			<form action="/enviar-encuesta">
-				<label for="PrimerGato">
-					<input id="PrimerGato" name="PrimerGato-SegundoGato" type="radio" value="PrimerGato">Primer Gato
-				</label>
-				<br>
-				
-				<label for="SegundoGato">
-					<input id="SegundoGato" name="PrimerGato-SegundoGato" type="radio" value="SegundoGato">Segundo Gato
-				</label>
-				<br>
-				<button type="submit">Enviar</button>
-			</form>
-			<hr>
-			
-			<p><strong><small>Aquí puedes enviar una foto de tu gato para participar en los concursos diarios.</small></strong></p>
-			<form action="/enviar-respuesta">
-				<!--Casillas de verificación-->
-				<label for="cariñoso">
-					<input id="cariñoso" type="checkbox" value="cariñoso" name="personalidad">Cariñoso
-				</label>
+        <label for="perezoso">
+          <input id="perezoso" type="checkbox" value="perezoso" name="personalidad">Perezoso
+        </label>
 
-				<label for="perezoso">
-					<input id="perezoso" type="checkbox" value="perezoso" name="personalidad">Perezoso
-				</label>
-
-				<label for="juguetón">
-					<input id="juguetón" type="checkbox" value="jueguetón" name="personalidad">Juguetón
-				</label>
-				<br>
-				<!--Texto y botón de Enviar-->
-				<input placeholder="URL de la foto de tu gatito" type="text">
-					<button type="submit">Enviar</button>
-			</form>
-			
-			<p>Haz clic <a href="https://pixabay.com/es/images/search/gato/" rel="noopener noreferrer" target="_blank">aquí</a> para ver más imágenes de gatos.</p>
-			
-			<h3>¿Qué le gusta y qué no le gusta a un gato?</h3>
-			
-			<div>
-				<p id="GustoBueno"><strong>Cosas que los gatos aman:</strong></p><!--La etiqueta "strong" convierte el texto en negrita-->
-				<ul>
-					<li>Menta gatuna.</li>
-					<li>Punteros láser.</li>
-					<li>Pescado.</li>
-					<li>Aceitunas.</li>
-				</ul>
-				<a href="https://bit.ly/3P3ziE3" rel="noopener noreferrer" target="_blank"><img src="https://bit.ly/3yB4Mul"></a> <!-- Imágen de la menta gatuna -->
-				
-				<p id="GustoMalo"><strong>Cosas que los gatos odian:</strong></p>
-				<ul> <!--Al poner "ol" (lista ordenada) en vez de "ul" (lista desordenada) la lista se ordenará de manera enumerada: 1, 2, 3, 4-->
-					<li>Los perros.</li>
-					<li>El humo del tabaco.</li>
-					<li>Los cítricos.</li>
-					<li>Bañarse.</li>
-				</ul>
-				<a href="https://bit.ly/3IH8gjp" rel="noopener noreferrer" target="_blank">
-					<img alt="Gato mojado" src="Imagenes/GatoLoco.jpg"></a>
-				</div>
-		</main>
-		<footer>
-			<a href="Imagenes/metapod.jpg" rel="noopener noreferrer" target="_blank">
-				<small><p>Imagen Random 🤑</p></small>
-			</a>
-		</footer>
-	</body>
+        <label for="juguetón">
+          <input id="juguetón" type="checkbox" value="jueguetón" name="personalidad">Juguetón
+        </label>
+        <br>
+        <!--Texto y botón de Enviar-->
+        <input placeholder="URL de la foto de tu gatito" type="text">
+          <button type="submit">Enviar</button>
+      </form>
+      
+      <p>Haz clic <a href="https://pixabay.com/es/images/search/gato/" rel="noopener noreferrer" target="_blank">aquí</a> para ver más imágenes de gatos.</p>
+      
+      <h3>¿Qué le gusta y qué no le gusta a un gato?</h3>
+      
+      <div>
+        <p id="GustoBueno"><strong>Cosas que los gatos aman:</strong></p><!--La etiqueta "strong" convierte el texto en negrita-->
+        <ul>
+          <li>Menta gatuna.</li>
+          <li>Punteros láser.</li>
+          <li>Pescado.</li>
+          <li>Aceitunas.</li>
+        </ul>
+        <a href="https://bit.ly/3PsZ6JW" rel="noopener noreferrer" target="_blank">
+          <img src="resources/imagenes/OliveCat.jpg" width="550" height="450" alt="Gato y aceitunas">
+        </a>
+        
+        <p id="GustoMalo"><strong>Cosas que los gatos odian:</strong></p>
+        <ul> <!--Al poner "ol" (lista ordenada) en vez de "ul" (lista desordenada) la lista se ordenará de manera enumerada: 1, 2, 3, 4-->
+          <li>Los perros.</li>
+          <li>El humo del tabaco.</li>
+          <li>Los cítricos.</li>
+          <li>Bañarse.</li>
+        </ul>
+        <a href="https://bit.ly/3IH8gjp" rel="noopener noreferrer" target="_blank">
+          <img src="resources/imagenes/GatoLoco.jpg" alt="Gato mojado" >
+        </a>
+        </div>
+    </main>
+    <footer>
+      <a href="resources/imagenes/metapod.jpg" rel="noopener noreferrer" target="_blank">
+        <small><p>Imagen Random 🤑</p></small>
+      </a>
+    </footer>
+  </body>
 </html>
